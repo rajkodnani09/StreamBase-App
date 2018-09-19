@@ -110,30 +110,5 @@ int main() {
 	client.run();
 	return 0;
 }
-/*
-int main() {
-  boost::asio::io_service ios;
-  //std::vector<char> Buf;
-  std::string Str = "passing this string";
-  boost::iostreams::file_descriptor FD("mypipe1");
-  boost::asio::posix::stream_descriptor fifo(ios, FD.handle());
-  boost::asio::async_write(fifo, boost::asio::buffer(Str),
-						   [&](const boost::system::error_code& error, std::size_t bytes_transferred) {});
-  ios.run();
-  std::cout << Str << std::endl;
 
-  return 0;
-}
-
-int main() {
-  boost::asio::io_service ios;
-  //std::vector<char> Buf;
-  std::string Str = "passing this string";
-  boost::iostreams::file_descriptor FD("mypipe1");
-  boost::asio::posix::stream_descriptor fifo(ios, FD.handle());
-  boost::asio::write(fifo, boost::asio::buffer(Str));
-  std::cout << Str << std::endl;
-
-  return 0;
-  }*/
 
